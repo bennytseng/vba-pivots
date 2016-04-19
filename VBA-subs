@@ -1,0 +1,89 @@
+Sub All()
+'
+' All Macro
+'
+Dim otpc As PivotField
+Dim otns As PivotField
+Dim ctpc As PivotField
+Dim ctns As PivotField
+Dim stpc As PivotField
+Dim stns As PivotField
+
+Set otpc = ActiveSheet.PivotTables("OpenTable").PivotFields("Project Classifcation")
+Set otns = ActiveSheet.PivotTables("OpenTable").PivotFields("Normalized Status")
+Set ctpc = ActiveSheet.PivotTables("ClosedTable").PivotFields("Project Classifcation")
+Set ctns = ActiveSheet.PivotTables("ClosedTable").PivotFields("Normalized Status")
+Set stpc = ActiveSheet.PivotTables("SummaryTable").PivotFields("Project Classifcation")
+Set stns = ActiveSheet.PivotTables("SummaryTable").PivotFields("Normalized Status")
+
+ActiveWorkbook.RefreshAll
+
+otpc.ClearAllFilters
+otns.CurrentPage = "Open"
+ctpc.ClearAllFilters
+ctns.CurrentPage = "Closed"
+stpc.ClearAllFilters
+stns.CurrentPage = "Open"
+
+ActiveWorkbook.RefreshAll
+
+ctpc.ClearAllFilters
+End Sub
+
+Sub OnlinePresence()
+
+Dim otpc As PivotField
+Dim otns As PivotField
+Dim ctpc As PivotField
+Dim ctns As PivotField
+Dim stpc As PivotField
+Dim stns As PivotField
+
+Set otpc = ActiveSheet.PivotTables("OpenTable").PivotFields("Project Classifcation")
+Set otns = ActiveSheet.PivotTables("OpenTable").PivotFields("Normalized Status")
+Set ctpc = ActiveSheet.PivotTables("ClosedTable").PivotFields("Project Classifcation")
+Set ctns = ActiveSheet.PivotTables("ClosedTable").PivotFields("Normalized Status")
+Set stpc = ActiveSheet.PivotTables("SummaryTable").PivotFields("Project Classifcation")
+Set stns = ActiveSheet.PivotTables("SummaryTable").PivotFields("Normalized Status")
+
+ActiveWorkbook.RefreshAll
+
+otpc.CurrentPage = "OP"
+otns.CurrentPage = "Open"
+ctpc.CurrentPage = "OP"
+ctns.CurrentPage = "Closed"
+stpc.CurrentPage = "OP"
+stns.CurrentPage = "Open"
+
+ActiveWorkbook.RefreshAll
+
+End Sub
+
+Sub Warehouse()
+
+Dim otpc As PivotField
+Dim otns As PivotField
+Dim ctpc As PivotField
+Dim ctns As PivotField
+Dim stpc As PivotField
+Dim stns As PivotField
+
+Set otpc = ActiveSheet.PivotTables("OpenTable").PivotFields("Project Classifcation")
+Set otns = ActiveSheet.PivotTables("OpenTable").PivotFields("Normalized Status")
+Set ctpc = ActiveSheet.PivotTables("ClosedTable").PivotFields("Project Classifcation")
+Set ctns = ActiveSheet.PivotTables("ClosedTable").PivotFields("Normalized Status")
+Set stpc = ActiveSheet.PivotTables("SummaryTable").PivotFields("Project Classifcation")
+Set stns = ActiveSheet.PivotTables("SummaryTable").PivotFields("Normalized Status")
+ActiveWorkbook.RefreshAll
+
+otpc.CurrentPage = "WH"
+otns.CurrentPage = "Open"
+ctpc.CurrentPage = "WH"
+ctns.CurrentPage = "Closed"
+stpc.CurrentPage = "WH"
+stns.CurrentPage = "Open"
+
+ActiveWorkbook.RefreshAll
+
+End Sub
+
